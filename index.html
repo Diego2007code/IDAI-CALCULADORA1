@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        .contenedor, .contenedor2, .contenedor3, .contenedor4, .contenedor5, .contenedor6-flex-direction1, .contenedor6-flex-direction2, .contenedor6-flex-direction3, .contenedor6-flex-direction4 {
+            border: 2px solid red;
+            flex-direction: column;
+            align-items: center;
+        }
+        input{
+            display: inline-block;
+        }
+        article {
+            width: 100px;
+            height: 100px; 
+            border: 1px solid black;
+            text-align: center;
+            line-height: 100px;
+        }
+        .contenedor article {
+            display: inline-block;
+        }
+        .contenedor2 article {  
+            display: inline-block;
+        } 
+        .contenedor3 article {
+            display: inline-block;
+        }
+        .contenedor4 article {
+            display: table-cell;
+        }
+        .contenedor5 article {
+            display: block;
+        }
+        .contenedor6-flex-direction1 article {
+            display: flex;
+        }
+        .contenedor6-flex-direction2 article {
+            display: flex;
+            flex-direction: column;
+        }
+        .contenedor6-flex-direction3 article {
+            display: flex;
+        }
+        .contenedor6-flex-direction4 article {
+            display: flex;
+            flex-direction: column;
+        }
+           
+    </style>
+</head>
+<body>
+        <div class="contenedor">
+        
+        <div class="contenedor"
+                <article>UNO</article>
+                <article>DOS</article>
+                <article>TRES</article>
+                <article>CUATRO</article>
+        <div class="contenedor2"
+                <article>UNO</article>
+                <article>DOS</article>
+                <article>TRES</article>
+                <article>CUATRO</article>
+        <div class="contenedor3"
+                <article>UNO</article>
+                <article>DOS</article>
+                <article>TRES</article>
+                <article>CUATRO</article>
+        <div class="contenedor4"
+                <article>UNO</article>
+                <article>DOS</article>
+                <article>TRES</article>
+                <article>CUATRO</article>
+        <div class="contenedor5"
+                <article>UNO</article>
+                <article>DOS</article>
+                <article>TRES</article>
+                <article>CUATRO</article>
+        <div class="contenedor6-flex-direction1"
+                <article>UNO</article>
+                <article>DOS</article>
+                <article>TRES</article> 
+                <article>CUATRO</article>
+        <div class="contenedor6-flex-direction2"
+                <article>UNO</article>
+                <article>DOS</article>
+                <article>TRES</article>
+                <article>CUATRO</article>
+        <div class="contenedor6-flex-direction3"
+                <article>UNO</article> 
+                <article>DOS</article>
+                <article>TRES</article>
+                <article>CUATRO</article>
+        <div class="contenedor6 -flex-direction4"
+                <article>UNO</article>
+                <article>DOS</article>
+                <article>TRES</article>
+                <article>CUATRO</article>
+        </div> 
+
+           <div class="datos-entrada"> 
+    <h1>Calculadora</h1>
+        <input type="text" id="numero1" placeholder="Número 1">
+        <input type="text" id="numero2" placeholder="Número 2">
+        </div>
+        
+        <div class="botones">
+            <button id="sumar" >Suma</button>
+            <button id="restar" >Resta</button>
+            <button id="multiplicar">Multiplicación</button>
+            <button id="dividir">División</button>
+        </div>
+       
+        <div class="datos-repuesta"
+        <input type="text" name="resultado" id="resultado" readonly>
+        </div>
+        <script>
+            var btnSumar = document.getElementById("sumar");
+            btnSumar.addEventListener("click", function() {
+                var numero1 = 0;
+                var numero2 = 0;
+                numero1=document.getElementById("numero1").value;
+                numero2=document.getElementById("numero2").value;
+                var resultado = Number(numero1) + Number(numero2);
+                document.getElementById("resultado").value = resultado;
+                alert("El resultado de la suma es: " + resultado);
+            });
+            var btnRestar = document.getElementById("restar");
+            btnRestar.addEventListener("click", function() {
+                var numero1 = 0;
+                var numero2 = 0;
+                numero1 = Number(document.getElementById("numero1").value);
+                numero2 = Number(document.getElementById("numero2").value);
+                var resultado = numero1 - numero2;
+                document.getElementById("resultado").value = resultado;
+            });
+            var btnMultiplicar = document.getElementById("multiplicar");
+            btnMultiplicar.addEventListener("click", function() {
+                var numero1 = 0;
+                var numero2 = 0;
+                numero1 = Number(document.getElementById("numero1").value);
+                numero2 = Number(document.getElementById("numero2").value);
+                var resultado = numero1 * numero2;
+                document.getElementById("resultado").value = resultado;
+                alert("El resultado de la multiplicación es: " + resultado);
+            });
+            var btnDividir = document.getElementById("dividir");
+            btnDividir.addEventListener("click", function() {
+                var numero1 = 0;
+                var numero2 = 0;
+                numero1 = Number(document.getElementById("numero1").value);
+                numero2 = Number(document.getElementById("numero2").value);
+                var resultado = numero1 / numero2;
+                document.getElementById("resultado").value = resultado;
+                alert("El resultado de la división es: " + resultado);
+            });
+        </script>
+    
+
+  
+    
